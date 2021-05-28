@@ -1,0 +1,135 @@
+$large: 1024px;
+$nav-px: 25px;
+$nav-py: 20px;
+$h-size: 1.125rem;
+$h2-size: 1.015rem;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+::after,
+::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e4e4e7;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/RobotoCondensed-Regular.ttf") format("ttf");
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(36, 160, 83, 0.959);
+  color: white;
+  padding: $nav-px $nav-py;
+  @media screen and (min-width: $large) {
+    $nav-py: 220px;
+    padding: $nav-px $nav-py;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-family: "Roboto";
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      font-family: Roboto, sans-serif;
+      font-size: $h-size;
+      margin: 0px 10px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  padding: $nav-px $nav-py;
+  @media screen and (min-width: $large) {
+    $nav-py: 220px;
+    padding: $nav-px $nav-py;
+  }
+  .recent-blog {
+    .reHead {
+      font-family: "Roboto";
+      font-size: 1.35rem;
+      letter-spacing: 0.15rem;
+    }
+  }
+}
+
+.blogs {
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  .blog {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+    overflow: hidden;
+    @media screen and (min-width: $large) {
+      width: 440px;
+      flex-grow: 0;
+    }
+    height: 230px;
+
+    .blog-head {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 20px 15px;
+      &:hover > .blog-bc {
+        transform: scale(1.5);
+      }
+      background: rgba(0, 0, 0, 0.5);
+      .blog-bc {
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        transition: 500ms;
+      }
+
+      .blog-title {
+        color: white;
+        font-size: 1.6rem;
+        font-family: "Roboto";
+      }
+      .blog-author {
+        font-family: Roboto;
+        font-size: 1.025rem;
+        color: hsl(0, 0%, 93%);
+        margin-top: 3px;
+      }
+      .blog-des {
+        height: 40px;
+        font-family: Roboto;
+        font-size: 1.025rem;
+        color: hsl(73, 100%, 85%);
+        display: block;
+        font-weight: 400;
+        margin: 20px 20px 50px 0px;
+        letter-spacing: 0.055rem;
+      }
+      .blog-stat {
+        font-family: Roboto;
+        font-size: 0.9rem;
+        color: hsl(44, 100%, 62%);
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+}

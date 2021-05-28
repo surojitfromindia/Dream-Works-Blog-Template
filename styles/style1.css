@@ -1,0 +1,179 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e4e4e7;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/RobotoCondensed-Regular.ttf") format("ttf");
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(36, 160, 83, 0.959);
+  color: white;
+  padding: 25px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 25px 220px;
+  }
+}
+
+.navbar h2 {
+  font-size: 1.75rem;
+  font-family: "Roboto";
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  font-family: Roboto, sans-serif;
+  font-size: 1.125rem;
+  margin: 0px 10px;
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+main {
+  padding: 25px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 25px 220px;
+  }
+}
+
+main .recent-blog .reHead {
+  font-family: "Roboto";
+  font-size: 1.35rem;
+  letter-spacing: 0.15rem;
+}
+
+.blogs {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+
+.blogs .blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+  height: 230px;
+}
+
+@media screen and (min-width: 1024px) {
+  .blogs .blog {
+    width: 440px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+}
+
+.blogs .blog .blog-head {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.blogs .blog .blog-head:hover > .blog-bc {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.blogs .blog .blog-head .blog-bc {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.blogs .blog .blog-head .blog-title {
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Roboto";
+}
+
+.blogs .blog .blog-head .blog-author {
+  font-family: Roboto;
+  font-size: 1.025rem;
+  color: #ededed;
+  margin-top: 3px;
+}
+
+.blogs .blog .blog-head .blog-des {
+  height: 40px;
+  font-family: Roboto;
+  font-size: 1.025rem;
+  color: #eeffb3;
+  display: block;
+  font-weight: 400;
+  margin: 20px 20px 50px 0px;
+  letter-spacing: 0.055rem;
+}
+
+.blogs .blog .blog-head .blog-stat {
+  font-family: Roboto;
+  font-size: 0.9rem;
+  color: #ffcb3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+/*# sourceMappingURL=style1.css.map */
